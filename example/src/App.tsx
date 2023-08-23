@@ -8,10 +8,10 @@ export default function App() {
     <View style={styles.container}>
       <SquishButton
         width={300}
-        height={300}
+        height={100}
         color="#4E5372"
         squish={7}
-        spacing={100}
+        radius={5}
       />
     </View>
   );

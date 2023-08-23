@@ -2,11 +2,17 @@ import * as React from 'react';
 
 // import ButtonSquish from 'example/src/ButtonSquish';
 import { StyleSheet, View } from 'react-native';
-import ButtonSquish from 'react-native-squish-button';
+import { SquishButton } from 'react-native-squish-button';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ButtonSquish width={300} height={100} color="#4E5372" squish={5} />
+      <SquishButton
+        width={300}
+        height={300}
+        color="#4E5372"
+        squish={7}
+        spacing={100}
+      />
     </View>
   );
 }

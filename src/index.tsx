@@ -16,7 +16,7 @@ import Svg, { Path, Text as SvgText } from 'react-native-svg';
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
-const SquishButton = ({
+export const SquishButton = ({
   squish = 5,
   width = 100,
   height = 100,
@@ -93,5 +93,3 @@ const SquishButton = ({
     </GestureHandlerRootView>
   );
 };
-
-export default SquishButton;

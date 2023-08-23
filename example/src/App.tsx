@@ -1,18 +1,12 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-squish-button';
-
+// import ButtonSquish from 'example/src/ButtonSquish';
+import { StyleSheet, View } from 'react-native';
+import ButtonSquish from 'react-native-squish-button';
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <ButtonSquish width={300} height={100} color="#4E5372" squish={5} />
     </View>
   );
 }
@@ -20,12 +14,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

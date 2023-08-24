@@ -33,10 +33,17 @@ import { SquishButton } from 'react-native-squish-button';
 
 <SquishButton
     width={300}
-    height={300}
+    height={100}
     color="#4E5372"
     squish={7}
-    spacing={100}
+    radius={5}
+    text="hello"
+    textStyle={{
+        color: 'white',
+        fontFamily: 'Helvetica',
+        fontWeight: 'bold',
+        fontSize: 16,
+    }}
 />
 ```
 
@@ -44,6 +51,8 @@ import { SquishButton } from 'react-native-squish-button';
 
 | Name |description| type |required |
 |---------|---------|---------|---------|
+| text  | Svg Text from react-native-svg   |string | Yes   |
+| textStyle| color, fontFamily, fontWeight, fontSize for svg text |style Object | Yes   |
 | squish  | Intensity of squish   |number | Yes   |
 | height  | Height of button   |number | Yes   |
 | width   | Width  of button   |number | Yes   |

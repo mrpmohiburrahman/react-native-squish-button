@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import * as React from 'react';
 
 // import ButtonSquish from 'example/src/ButtonSquish';
@@ -12,6 +13,13 @@ export default function App() {
         color="#4E5372"
         squish={7}
         radius={5}
+        text="hello"
+        textStyle={{
+          color: 'white',
+          fontFamily: 'Helvetica',
+          fontWeight: 'bold',
+          fontSize: 16,
+        }}
       />
     </View>
   );

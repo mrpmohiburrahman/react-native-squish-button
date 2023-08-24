@@ -15,14 +15,47 @@ import Animated, {
 import Svg, { Path, Text as SvgText } from 'react-native-svg';
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
+export type SquishButtonProps = {
+  squish?: number;
+  width?: number;
+  height?: number;
+  spacing?: number;
+  radius?: number;
+  color?: string;
+  text?: string;
+  textStyle?: {
+    color?: string;
+    fontFamily?: string;
+    fontWeight?:
+      | 'normal'
+      | 'bold'
+      | '100'
+      | '200'
+      | '300'
+      | '400'
+      | '500'
+      | '600'
+      | '700'
+      | '800'
+      | '900';
+    fontSize?: number;
+  };
+};
 
-export const SquishButton = ({
+export const SquishButton: React.FC<SquishButtonProps> = ({
   squish = 5,
   width = 100,
   height = 100,
   spacing: s = 20,
   radius = 5,
   color = 'gold',
+  text = `hello world`,
+  textStyle = {
+    color: 'white',
+    fontFamily: 'Helvetica',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
 }) => {
   const squishOffset = useSharedValue(0);
   const gestureHandler =
@@ -64,7 +97,7 @@ export const SquishButton = ({
   `;
     return { d };
   });
-  const fontSize = 16;
+
   return (
     <GestureHandlerRootView>
       <LongPressGestureHandler onGestureEvent={gestureHandler}>
@@ -76,16 +109,16 @@ export const SquishButton = ({
           >
             <AnimatedPath animatedProps={path} fill={color} fillOpacity="1" />
             <SvgText
-              fill="white"
-              fontFamily="Helvetica"
-              fontWeight="bold"
-              fontSize={fontSize}
+              fill={textStyle.color}
+              fontFamily={textStyle.fontFamily}
+              fontWeight={textStyle.fontWeight}
+              fontSize={textStyle.fontSize}
               textAnchor="middle"
               x={width / 2}
               y={height / 2}
-              dy={fontSize * 0.25}
+              dy={(textStyle.fontSize ? textStyle.fontSize : 16) * 0.25}
             >
-              Button
+              {text}
             </SvgText>
           </Svg>
         </Animated.View>

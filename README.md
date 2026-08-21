@@ -81,3 +81,6 @@ MIT
 <a href="https://www.reddit.com/user/mrpm0h18urr4hm4n/" target="_blank">
     <img src="https://img.shields.io/reddit/user-karma/combined/mrpm0h18urr4hm4n?style=social" alt="Reddit User Karma" style="height: auto !important; width: 285px !important;" />
 </a>
+<a href="https://resume.rnui.dev" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-resume.rnui.dev-2bbc8a?style=flat-square" alt="Portfolio" style="height: auto !important; width: 200px !important;" />
+</a>
